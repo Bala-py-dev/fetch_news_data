@@ -1,0 +1,5 @@
+api_id:- aa2a83c1187c477d957848366d09548a
+celery:- celery -A main.celery_app worker --loglevel=info
+app:- uvicorn main:app --reload  or  uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+celery_beat : celery -A main.celery_app beat --loglevel=info
+flower:- celery -A main.celery_app flower
